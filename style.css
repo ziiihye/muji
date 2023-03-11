@@ -55,7 +55,7 @@ header{
     margin: 0 auto;
     position: relative;
 }
-.logo>img{
+.logo a>img{
     position: absolute;
     top:20px;
     height: 60%;
