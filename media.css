@@ -175,6 +175,9 @@
     }
     header{
         height: 130px;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
     }
     .header_top{
         width: 100%;
@@ -191,6 +194,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #fff;
     }
     .logo{
         width: 50%;
@@ -208,6 +212,7 @@
     .nav{
         width: 100%;
         display: block;
+        background-color: #fff;
     }
     .hbg_btn{
         width: 40px;
@@ -251,6 +256,8 @@
     }
     /* 헤더 종료 */
     .content{
+        position: relative;
+        top: 130px;
         width: 100%;
     }
     /* slide 시작 */
@@ -627,7 +634,7 @@
         z-index: 99;
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: #ffffff;
     }
     .m_menu_top{

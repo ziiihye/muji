@@ -100,6 +100,15 @@ if(!$(".menu").is(":visible")){
   })
 
 
+  // 상단 header고정
+  $(window).scroll(function () {
+    var top = $(document).scrollTop();
+    if(top>=30){
+      $("header").css("top","-30px")
+    }else{
+      $("header").css("top","0px")
+    }
+  })
 }
 
 
@@ -118,4 +127,5 @@ $(document).ready(function(){
     }
   })
 });
+
 
