@@ -34,6 +34,7 @@ $('.post-wrapper').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode:true,
+          arrows:false,
         }
       }
     ]
@@ -59,6 +60,15 @@ $('.post-wrapper').slick({
       $(".modal").css("display","block");
       $(".hidden_menu").show(200)
   })
+}else{
+    // 미디어 쿼리 사이드 메뉴
+    $(".hbg_btn").click(function(){
+      $(".m_menu").fadeIn(500);
+  })
+  
+    $(".close").click(function(){
+      $(".m_menu").fadeOut(500)
+    })
 }
 
  // hidden_ment 닫는 스크립트
@@ -90,14 +100,7 @@ if(!$(".menu").is(":visible")){
     ]
   }); 
 
-  // 미디어 쿼리 사이드 메뉴
-  $(".hbg_btn").click(function(){
-    $(".m_menu").fadeIn(500);
-})
 
-  $(".close").click(function(){
-    $(".m_menu").fadeOut(500)
-  })
 
 
   // 상단 header고정
@@ -116,16 +119,16 @@ if(!$(".menu").is(":visible")){
 $(document).ready(function(){
   $(".sub_menu").click(function(){
     let idx = $(".sub_menu").index(this)
-    if($(".inner_menu").eq(idx).is(":visible")){
-      $(".inner_menu").eq(idx).slideUp();
-      $(".plus").eq(idx).css("display","block");
-      $(".minus").eq(idx).css("display","none");
-    }else{
-      $(".inner_menu").eq(idx).slideDown();
-      $(".plus").eq(idx).css("display","none");
-      $(".minus").eq(idx).css("display","block");
-    }
+    if(!$(".inner_menu").eq(idx).is(":visible")){
+        $(".inner_menu").eq(idx).slideDown();
+        $(".sub_menu").eq(idx).siblings().children(".inner_menu").slideUp();
+        $(".plus").eq(idx).css("display","none");
+        $(".minus").eq(idx).css("display","block");
+      }else{
+        $(".inner_menu").eq(idx).slideUp();
+        $(".plus").eq(idx).css("display","block");
+        $(".minus").eq(idx).css("display","none");
+      }
   })
 });
-
 

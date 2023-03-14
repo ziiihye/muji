@@ -1,5 +1,11 @@
 /* 노트북 미디어 쿼리 1430~1200 */
 @media all and (min-width:1200px) and (max-width:1430px) {
+    .search{
+        position: relative;
+        width: 250px;
+    margin-top: 30px;
+    right: 1px !important;
+    }
     .menu>li a{
         font-size: 0.8em;
     }
@@ -532,7 +538,7 @@
     /* 메일매거진 신청 */
     .magazine{
         width: 100%;
-        height: 420px;
+        height: 600px;
         display: block;
     }
     .magazine_left {
@@ -554,6 +560,7 @@
 
     /* footer 시작 */
     footer{
+        display: block;
         margin-top: 100px;
     }
     .footer{
@@ -629,13 +636,14 @@
     /* 모바일 메뉴 */
     .m_menu{
         display: none;
-        top: 30px;
+        top:0;
         left: 0;
         z-index: 99;
-        position: absolute;
+        position:fixed;
         width: 100%;
-        height: 100vh;
+        min-height: 200vh;
         background-color: #ffffff;
+        overflow: scroll;
     }
     .m_menu_top{
         width: 100%;
@@ -708,6 +716,7 @@
         cursor: pointer;
     }
     .plus,.minus{
+        font-weight: bold;
         position: absolute;
         right: 20px;
         top: 0px;
